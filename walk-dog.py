@@ -1,3 +1,6 @@
+# Programer: Jacob Mark-Synard
+# Discription: Making a dog move.
+
 # Import and initialize the pygame library
 import pygame
 from pygame.locals import *
@@ -27,8 +30,19 @@ background_image = pygame.image.load("park.png")
 dog_image = pygame.image.load("dog.png")
 
 # Create sprites
+dog = Sprite(dog_image)
+dog.postion = (300, 100)
+dog.direction = 300
+dog.rotates = True
+dog.speed = 2
+dog.add(all_sprites)
 
-
+dog2 = Sprite(dog_image)
+dog2.postion = (100, 200)
+dog2.direction = 500
+dog2.rotates = False 
+dog2.speed = 2
+dog2.add(all_sprites)
 
 # Main Loop
 while True:
